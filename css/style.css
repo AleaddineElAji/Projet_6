@@ -10,7 +10,68 @@
 }
 
 /* Main nodes changes */
-
+div{
+    border: red 1px solid;
+}
 body {
     font-family : 'urbanistregular';
+    background-color: #16151a;
+}
+
+header {
+    background-image: url();
+    height: 100vh;
+    border: red 1px solid;
+    padding : 0;
+}
+/* HEADER */
+.container-fluid{
+    padding: 0;
+}
+.navbar-nav{
+    height : 64px;
+    background-color: #fff;
+}
+.menu-btn{
+    width : 64px;
+    height: 64px;
+    background-color: #3bc8e7 ;
+}
+.menu-btn img{
+    width : 20px;
+}
+.logo img{
+    width: 25px;
+}
+.logo{
+    flex-wrap: nowrap;
+}
+.brand{
+    font-weight: 600;
+    color:#3bc8e7;
+    line-height: 1.2rem;
+    margin: 0;
+}
+.sub-brand{
+    font-weight: 200;
+}
+#searchfield{
+    background-color: #f0f5f9;
+    padding: 2px;
+}
+#searchfield input{
+    /* flex-grow : 2; */
+    border: none;
+    background-color: #f0f5f9;
+
+}
+#searchfield button{
+    border : none;
+    background-color: #3bc8e7;
+    height: 30px;
+    width: 30px;
+    border-radius: 5px;
+}
+#account img{
+    height : 35px;
 }
