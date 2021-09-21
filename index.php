@@ -2,5 +2,9 @@
 <?php include ('php/header.php') 
     ?>
 
+<!-- Including the footer -->
+<?php include ('php/footer.php') 
+    ?>
+
 
     

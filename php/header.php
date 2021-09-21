@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music Band - La musique au bout des doigts</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@900&display=swap" rel="stylesheet">
     <meta name="description"
         content="Music Band vous permet d'écouter votre musique préférée où vous voulez. Profitez de podcasts exclusifs et de playlists sur-mesure construite à partir de plus de cinquante millions de titres.">
     <!-- BOOTSTRAP -->
@@ -28,7 +31,7 @@
             </div>
             <form action="" id="searchfield" class="d-flex">
                 <input type="search" size="35" placeholder="Recherchez, écoutez...">
-                <button type="submit"><img src="img/headphones.svg" alt=""></button>
+                <button type="submit"><img src="img/headphones.svg" alt="Bouton de recherche de musique"></button>
             </form>
             <div id="account">
                 <img src="img/user.svg" alt="icone utilisateur">
