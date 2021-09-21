@@ -15,16 +15,16 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="m-auto">
     <header class="container-fluid">
         <nav class="navbar-nav d-flex flex-row align-items-center">
             <div class="menu-btn d-flex justify-content-center col-2">
                 <img src="img/menuburger.svg" alt="Menu Burger">
             </div>
-            <div class="d-flex col-5 logo ps-3 align-items-center">
+            <div class="d-flex col-6 logo ps-3 align-items-center">
                 <img src="img/logo.svg" alt="logo du site">
                 <p class="ms-3 brand">Music Band <br>
-                <span class="sub-brand">La musique au bout des doigts</span></p>
+                    <span class="sub-brand">La musique au bout des doigts</span></p>
             </div>
             <form action="" id="searchfield" class="d-flex">
                 <input type="search" size="35" placeholder="Recherchez, écoutez...">
@@ -33,7 +33,20 @@
             <div id="account">
                 <img src="img/user.svg" alt="icone utilisateur">
             </div>
-            <p class="m-0">Connexion / Inscription</p>
+            <p class="m-0" id="login">Connexion</p>
         </nav>
+        <div class="d-flex flex-column justify-content-end" id="catchphrase">
+            <h1>Music <span class="text-white">Band</span></h1>
+            <p class="description-offer text-white">Votre musique sans pub, partout. Seulement 9,99 €/mois ensuite.<br>
+                Soumis à conditions. Des podcasts exclusifs.<br>
+                Des playlists sur-mesure. Faites des découvertes.<br>
+                Zappez à volonté. Plus de 50 M de chansons.<br>
+                Annulation à tout moment.</p>
+                <div>
+                    <a href="" class="start-listening">COMMENCER L'ÉCOUTE</a>
+                    <a href="" class="subscribe">S'ABONNER</a>
+                </div>
+                
+        </div>
 
     </header>
