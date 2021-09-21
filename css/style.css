@@ -1,0 +1,16 @@
+/* FONT FACE */
+
+@font-face {
+    font-family: 'urbanistregular';
+    src: url('../fonts/urbanist-variablefont_wght-webfont.woff2') format('woff2'),
+         url('../fonts/urbanist-variablefont_wght-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* Main nodes changes */
+
+body {
+    font-family : 'urbanistregular';
+}
