@@ -29,23 +29,27 @@
                 <p class="ms-3 brand">Music Band <br>
                     <span class="sub-brand">La musique au bout des doigts</span></p>
             </div>
-            <form action="" id="searchfield" class="d-flex">
+            <form action="" id="searchfield" class="d-flex d-none d-md-block">
                 <input type="search" size="35" placeholder="Recherchez, écoutez...">
                 <button type="submit"><img src="img/headphones.svg" alt="Bouton de recherche de musique"></button>
             </form>
+            <!-- Note pour plus tard, au clic le bouton suivant affiche la barre de recherche qui a disparue -->
+            <div class="searchsong d-flex d-block d-md-none">
+                <img src="img/loupe.svg" alt="Loupe pour rechercher" class="loupe m-auto">
+            </div>
             <div id="account">
                 <img src="img/user.svg" alt="icone utilisateur">
             </div>
-            <p class="m-0" id="login">Connexion</p>
+            <p class="m-0 d-none d-lg-block" id="login">Connexion</p>
         </nav>
         <div class="d-flex flex-column justify-content-end" id="catchphrase">
             <h1>Music <span class="text-white">Band</span></h1>
-            <p class="description-offer text-white">Votre musique sans pub, partout. Seulement 9,99 €/mois ensuite.<br>
+            <p class="description-offer text-white pt-3">Votre musique sans pub, partout. Seulement 9,99 €/mois ensuite.<br>
                 Soumis à conditions. Des podcasts exclusifs.<br>
                 Des playlists sur-mesure. Faites des découvertes.<br>
                 Zappez à volonté. Plus de 50 M de chansons.<br>
                 Annulation à tout moment.</p>
-                <div>
+                <div class="pt-5">
                     <a href="" class="start-listening">COMMENCER L'ÉCOUTE</a>
                     <a href="" class="subscribe">S'ABONNER</a>
                 </div>

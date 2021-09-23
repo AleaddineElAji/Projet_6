@@ -8,6 +8,14 @@
     font-style: normal;
 
 }
+@font-face {
+    font-family: 'robotoblack';
+    src: url('../fonts/roboto-black-webfont.woff2') format('woff2'),
+         url('../fonts/roboto-black-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
 
 /* Main nodes changes */
 
@@ -15,6 +23,7 @@ body {
     font-family : 'urbanistregular';
     background-color: #16151a;
     max-width : 1440px;
+    margin: auto;
 }
 
 header {
@@ -65,6 +74,7 @@ footer{
 }
 .logo img{
     width: 25px;
+    
 }
 .logo{
     flex-wrap: nowrap;
@@ -93,15 +103,24 @@ footer{
     background-color: #f0f5f9;
     padding: 0.3rem;
     padding-left : 1rem;
-
+    width : 23vw;
 }
 #searchfield button{
     border : none;
     background-color: #3bc8e7;
-    height: 30px;
-    width: 30px;
+    height: 28px;
+    width: 28px;
     margin:auto;
-    border-radius: 5px;
+    border-radius: 3px;
+}
+.searchsong{
+    height: 35px;
+    width: 35px;
+    border: 2px solid #3bc8e7;
+    border-radius: 50%;
+}
+.loupe {
+    height: 25px;
 }
 #account img{
     height : 35px;
@@ -110,7 +129,7 @@ footer{
 }
 #login{
     color:#3bc8e7;
-    font-weight: 300;
+    font-weight: 900;
 }
 ::placeholder{
     color:#3bc8e7;
@@ -187,4 +206,36 @@ footer{
 .phone-number{
     color:#3bc8e7;
     font-weight: 700;
+}
+
+/* Top artist section */
+ #artist-banner{
+     height: 400px;
+     max-width : 1440px ;
+     background-size: cover;
+     background-position:center;
+     background-repeat: no-repeat;
+     line-height: 1.6rem;
+     padding-left : 5rem;
+     padding-bottom : 6rem;
+ }
+
+ .discover-artist{
+     color : #fff;
+     font-weight: 800;
+     font-size : 2rem;
+     font-family: 'robotoblack';
+     filter: drop-shadow(1px 3px 2px rgba(0, 0, 0, 0.411));
+ }
+#artist-banner img {
+    height: 4rem;
+    
+}
+
+
+@media screen and (max-width: 630px){
+    #catchphrase{
+        padding-left: 14vw;
+        padding-bottom: 20vw;
+    }
 }

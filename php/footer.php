@@ -1,8 +1,8 @@
-        <footer class="d-flex justify-content-evenly">
+        <footer class="d-flex flex-column flex-lg-row text-center text-lg-start justify-content-evenly">
             <!-- FIRST COLUMN -->
-            <div class="flex-column col-3 pt-5 pb-5">
-                <div class="d-flex flex-row">
-                    <img src="img/logowhite.svg" alt="Logo blanc">
+            <div class="flex-column col-9 m-auto col-lg-3 pt-5 pb-5">
+                <div class="d-block d-lg-flex flex-row">
+                    <img src="img/logowhite.svg" alt="Logo blanc" class="pb-3 pb-lg-0">
                     <p class="ms-3 brand-footer text-white ps-2">Music Band <br>
                     <span class="sub-brand-footer text-white-50">La musique au bout des doigts</span></p>
                 </div>
@@ -12,7 +12,7 @@
 
             </div>
             <!-- SECOND COLUMN -->
-            <div class="flex-column col-4 pt-5 pb-5">
+            <div class="flex-column col-12 col-md-4 pt-5 pb-5 m-auto">
                 <div>
                     <p class="newsletter text-white">Inscrivez-vous à la Newsletter</p>
                 </div>
@@ -29,29 +29,29 @@
 
             </div>
             <!-- THIRD COLUMN -->
-            <div class="flex-column col-3 pt-5 pb-5">
+            <div class="flex-column col-12 col-lg-3 pt-5 pb-5">
                 <div>
                     <p class="newsletter text-white">Nous contacter</p>
                 </div>
                 <div class="text-white-50 sign-info-footer">
                     <p>Vous souhaitez nous contacter.<br>Plusieurs solutions s'offrent à vous.</p>
                 </div>
-                <div class="contact-us d-flex">
-                    <a href="tel:+33389878586"><img src="img/call.svg" alt="Icône de téléphone" class="call"><a>
-                    <p class="text-white">Par téléphone au :<br>
+                <div class="contact-us d-block d-lg-flex">
+                    <a href="tel:+33389878586" class="pb-5 pb-lg-0"><img src="img/call.svg" alt="Icône de téléphone" class="call"><a>
+                    <p class="text-white pt-3 pt-lg-0">Par téléphone au :<br>
                         <span class="phone-number">03 89 87 85 86</span></p>
                     
                 </div>
-                <div class="contact-us d-flex">
-                    <a href="mailto: contact[@]musicband.com"><img src="img/mail.svg" alt="Icône de téléphone" class="call"></a>
-                    <p class="text-white">Par email au :<br>
+                <div class="contact-us d-block d-lg-flex">
+                    <a href="mailto: contact[@]musicband.com" class="pb-5 pb-lg-0"><img src="img/mail.svg" alt="Icône de téléphone" class="call"></a>
+                    <p class="text-white pt-3 pt-lg-0">Par email au :<br>
                         <span class="phone-number">contact[@]musicband.com</span></p>
                 </div>
 
             </div>
         
         </footer>
-
+        <script src="js/script.js"></script>
     </body>
 
 </html>
