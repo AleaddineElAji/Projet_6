@@ -14,3 +14,29 @@
 body {
     font-family : 'urbanistregular';
 }
+
+#genre{
+    display: flex;
+    overflow: hidden;
+    background-color: #16151A;
+    flex-direction: row;
+}
+
+#playlist{
+    display: flex;
+    overflow: hidden;
+    background-color: #16151A;
+    flex-direction: row;
+}
+
+#genre div{
+    margin:80px 10px 100px 10px ;
+    color: whitesmoke;
+    /* font-family: urbanist; */
+}
+
+#playlist div{
+    margin:80px 10px 100px 10px ;
+    color: whitesmoke;
+    /* font-family: urbanist; */
+}
