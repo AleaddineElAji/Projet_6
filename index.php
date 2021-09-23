@@ -28,4 +28,7 @@
 <!-- Including the footer -->
 <?php include 'php/footer.php' ?>
     
+<<<<<<< HEAD
 <!-- testalaedin -->
+=======
+>>>>>>> 7f4819bae4514399ca9d02028e3d052493d6323d
