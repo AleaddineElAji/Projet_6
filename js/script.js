@@ -7,15 +7,16 @@ requeteGenre.open(method, urlGenre);
 
 requeteGenre.onreadystatechange = function(){
     if(requeteGenre.readyState === 4 && requeteGenre.status === 200){
-        console.log(JSON.parse(requeteGenre.response))
+        // console.log(JSON.parse(requeteGenre.response))
         const genreArray = JSON.parse(requeteGenre.responseText)
             for (let i = 0; i < genreArray.data.length ; i++) {
-                const datataPicture = genreArray.data[i].picture;
+                const datataPicture = genreArray.data[i].picture_medium;
                 const datataName = genreArray.data[i].name;
                 let myImg = document.createElement('img');
                 let myTitle = document.createElement('p');
                 let myGenre = document.createElement('div');
                 myGenre.setAttribute("id", "MyDiv"+i);
+                myGenre.setAttribute("class", "swiper-slide");
                 myImg.src = datataPicture;
                 myTitle.textContent = datataName;
                 myGenre.appendChild(myImg);
@@ -36,14 +37,15 @@ requetePlaylist.open(method, urlPlaylist);
 requetePlaylist.onreadystatechange = function(){
     if(requetePlaylist.readyState === 4 && requetePlaylist.status === 200){
         // console.log(JSON.parse(requetePlaylist.response))
-        const genreArray = JSON.parse(requetePlaylist.responseText)
-            for (let i = 0; i < genreArray.data.length ; i++) {
-                const datataPicture = genreArray.data[i].picture;
-                const datataName = genreArray.data[i].title;
+        const playlistArray = JSON.parse(requetePlaylist.responseText)
+            for (let i = 0; i < playlistArray.data.length ; i++) {
+                const datataPicture = playlistArray.data[i].picture_medium;
+                const datataName = playlistArray.data[i].title;
                 let myImgPlaylist = document.createElement('img');
                 let myTitlePlaylist = document.createElement('p');
                 let myPlaylist = document.createElement('div');
                 myPlaylist.setAttribute("id", "MyDiv"+i);
+                myPlaylist.setAttribute("class", "swiper-slide");
                 myImgPlaylist.src = datataPicture;
                 myTitlePlaylist.textContent = datataName;
                 myPlaylist.appendChild(myImgPlaylist);
@@ -54,4 +56,3 @@ requetePlaylist.onreadystatechange = function(){
 
 };
 requetePlaylist.send();
-
