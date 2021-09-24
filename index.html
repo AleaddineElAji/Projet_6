@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    
 </head>
 <body>
 
@@ -31,13 +32,13 @@ mySection.appendChild(myTopContainer);
 // Définition d'éléments Top Ten Albums (Div + ul)
 //
 let myTopAlbums = document.createElement('div');
-    myTopAlbums.classList.add("col-6");
-    myTopAlbums.className = "topAlbumsDiv";
-    myTopAlbums.style ='background-color:lime-green';
     
-
-let myUlAlbums = document.createElement('ul');
+    myTopAlbums.className = "topAlbumsDiv";
+    myTopAlbums.classList.add("col-6");
+    
+    let myUlAlbums = document.createElement('ul');
     myUlAlbums.className = "ulAlbums";
+   
     myTopAlbums.appendChild(myUlAlbums);
 
 myTopContainer.appendChild(myTopAlbums);
@@ -48,10 +49,11 @@ myTopContainer.appendChild(myTopAlbums);
 let myTopTracks = document.createElement('div');
     myTopTracks.className = "topTracksDiv";
     myTopTracks.classList.add("col-6");
+               
     
 let myUlTracks = document.createElement('ul');
     myUlTracks.className = "ulTracks";
-
+   
     myTopTracks.appendChild(myUlTracks);
 
 myTopContainer.appendChild(myTopTracks);
@@ -88,7 +90,8 @@ requeteChart.onload = function(){
                 
                  // creation des LI avec info et Image du Album  
                        let myLiAlbums = document.createElement('li');
-                        
+                           myLiAlbums.style.textDecorationStyle="none";
+                                                    
                         
                     // du div Image            
                         let myAlbumsImgDiv = document.createElement('div');
@@ -106,7 +109,7 @@ requeteChart.onload = function(){
                             myAlbumsTextDiv.className = "textAlbumsDiv";
                             myAlbumsTextDiv.classList.add("col-3");
 
-                        myAlbumsTextDiv.innerHTML= albumTitle + albumArtist + albumPosition  ; 
+                        myAlbumsTextDiv.innerHTML= albumTitle + "</br>" + albumArtist + " " + albumPosition; 
                         myLiAlbums.appendChild(myAlbumsTextDiv);
  
                     // ajouter li au HTML avec les infos 
@@ -131,6 +134,7 @@ requeteChart.onload = function(){
            
             // creation des LI avec info et Image du Track
                         let myLiTrack = document.createElement('li');
+                            myLiTrack.style.textDecorationLine = "none";
                         
             // creation des DIV's dedans les LI pour le txt et l'image      
 
