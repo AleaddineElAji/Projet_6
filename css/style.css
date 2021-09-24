@@ -232,6 +232,29 @@ footer{
     
 }
 
+/* Podcasts section */
+
+    /* the class when my div is hidden */
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 0px;
+    width: 100%;
+    transition: .5s ease;
+    background-color: #3bc8e7;
+    color: #fff;
+    opacity: 0;
+    overflow: hidden;
+}
+    /* the class toggled when the mouseover event is triggered */
+.hoverlay {
+    height : 100%;
+    opacity: 1;
+    transition : 0.5s ease;
+}
+
+
 
 @media screen and (max-width: 630px){
     #catchphrase{

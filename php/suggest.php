@@ -7,6 +7,4 @@
             <span class="discover-artist">Découvrez l'artiste du moment</span>
         </div>
     </div>
-
-
 </section>
