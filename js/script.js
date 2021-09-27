@@ -1,15 +1,15 @@
-const requete = new XMLHttpRequest();
+const requeteMainArtist = new XMLHttpRequest();
 const method = 'GET';
 const urlChart = "https://api.deezer.com/chart";
-requete.open(method, urlChart);
+requeteMainArtist.open(method, urlChart);
 
 
 
-requete.onreadystatechange = function(){
+requeteMainArtist.onreadystatechange = function(){
     let artistBanner = document.querySelector("#artist-banner")
     let topArtist = document.querySelector("#locate-artist-name")
-    if(requete.readyState === 4 && requete.status === 200){
-        const mainArtist = JSON.parse(requete.responseText)
+    if(requeteMainArtist.readyState === 4 && requeteMainArtist.status === 200){
+        const mainArtist = JSON.parse(requeteMainArtist.responseText)
     
         // console.log(mainArtist.artists.data[1].name)
         // console.log(mainArtist.artists.data[1].picture_xl)
@@ -27,7 +27,7 @@ requete.onreadystatechange = function(){
         console.log("Une erreur est survenue")
     }
 };
-requete.send()
+requeteMainArtist.send()
 
 requeteRadios = new XMLHttpRequest();
 requeteRadios.open(method, urlChart);
