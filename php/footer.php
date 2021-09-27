@@ -13,8 +13,8 @@
                 var swiper = new Swiper(".mySwiper", {slidesPerView: 4.75, spaceBetween: 30, freeMode: true,});
             }else if(window.innerWidth>680){
                 var swiper = new Swiper(".mySwiper", {slidesPerView: 3.75, spaceBetween: 30, freeMode: true,});
-            }else if(window.innerWidth<=680){
-                var swiper = new Swiper(".mySwiper", {slidesPerView: 2, spaceBetween: 30, freeMode: true,});
+            }else if(window.innerWidth>350){
+                var swiper = new Swiper(".mySwiper", {slidesPerView: 1.75, spaceBetween: 30, freeMode: true,});
             }
   </script>
 </html>
