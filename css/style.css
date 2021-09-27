@@ -246,6 +246,7 @@ footer{
     color: #fff;
     opacity: 0;
     overflow: hidden;
+    font-size : 0.8rem;
 }
     /* the class toggled when the mouseover event is triggered */
 .hoverlay {
@@ -253,6 +254,7 @@ footer{
     opacity: 1;
     transition : 0.5s ease;
     width: 250px;
+    padding : 10px;
 }
 
 h3 {
@@ -267,6 +269,7 @@ h3 {
 .first-word-title{
     color:#3bc8e7;
 }
+
 #main-podcasts {
     display: flex;
     overflow: hidden;

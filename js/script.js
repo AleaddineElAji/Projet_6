@@ -50,9 +50,12 @@ requeteRadios.onreadystatechange = function(){
             let podcastsDescDiv = document.createElement("div");
             // creating a Node of Text so I can append it later
             let podcastsDesc = document.createTextNode(podcastsArray.podcasts.data[i].description);
+            
+            
 
             // Appending my elements
             podcastsDiv.appendChild(podcastsBox); // appending the div that will contain the image
+            
             podcastsBox.appendChild(podcastsPicture); // appending the image in that div
             podcastsDescDiv.appendChild(podcastsDesc); // appending the textnode created previously in the description div
             // podcastsDescDiv.style = "position: absolute; bottom: 0;left: 0;height: 0px;width: 100%;transition: .5s ease;background-color: #3bc8e7;overflow: hidden;"

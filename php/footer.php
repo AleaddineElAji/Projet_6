@@ -54,7 +54,7 @@
         <script src="js/script.js"></script>
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
         <script>   
-            if(window.innerWidth>1400) {
+            if(window.innerWidth>1440) {
                 var swiper = new Swiper(".mySwiper", {slidesPerView: 5.25, spaceBetween: 47, freeMode: true,});
                 }else if(window.innerWidth>1200){
                     var swiper = new Swiper(".mySwiper", {slidesPerView: 5, spaceBetween: 30, freeMode: true,});
