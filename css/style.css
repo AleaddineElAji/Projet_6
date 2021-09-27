@@ -271,6 +271,19 @@ h3 {
 }
 
 #main-podcasts {
+}
+
+#genre{
+    display: flex;
+    overflow-x: hidden;
+    flex-direction: row;
+    width: max-content;
+    color: #fff;
+    font-size : 0.8rem;
+    margin-bottom : 5rem;
+}
+
+#playlist{
     display: flex;
     overflow: hidden;
     flex-direction: row;
@@ -280,9 +293,42 @@ h3 {
     overflow: hidden;
 }
 
+.small-titles {
+    color : #fff;
+    font-size : 0.8rem;
+    font-weight : 900;
+    padding-top : 0.4rem;
+}
+
+#podcasts {
+    margin-bottom: 5rem;
+    
+}
+
 @media screen and (max-width: 630px){
     #catchphrase{
         padding-left: 14vw;
         padding-bottom: 20vw;
     }
+}
+
+#genre div{
+    margin: 0;
+}
+
+#playlist div{
+    margin: 0;
+}
+
+.section1{
+    overflow: hidden;
+    margin-top : 3rem;
+}
+
+
+.myDiv img{
+    display: block;
+    object-fit: cover;
+    width: 184px;
+    height: 184px;
 }

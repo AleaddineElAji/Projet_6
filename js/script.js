@@ -62,9 +62,6 @@ requeteRadios.onreadystatechange = function(){
             podcastsDescDiv.className = "overlay";
             podcastsBox.appendChild(podcastsDescDiv); // appending the description div to the box div, that one is visible only when mouseover is triggered
             
-            
-
-
 
             podcastsBox.addEventListener("mouseover", ()=>{
                 podcastsDescDiv.classList.add("hoverlay");
@@ -80,3 +77,62 @@ requeteRadios.onreadystatechange = function(){
     }
 };
 requeteRadios.send()
+
+// ALAEDIN 
+const requeteGenre = new XMLHttpRequest();
+const urlGenre = "https://api.deezer.com/genre";
+
+
+requeteGenre.open(method, urlGenre);
+
+requeteGenre.onreadystatechange = function(){
+    if(requeteGenre.readyState === 4 && requeteGenre.status === 200){
+        // console.log(JSON.parse(requeteGenre.response))
+        const genreArray = JSON.parse(requeteGenre.responseText)
+            for (let i = 0; i < genreArray.data.length ; i++) {
+                const datataPicture = genreArray.data[i].picture_medium;
+                const datataName = genreArray.data[i].name;
+                let myImg = document.createElement('img');
+                let myTitle = document.createElement('p');
+                let myGenre = document.createElement('div');
+                myGenre.setAttribute("class", "myDiv swiper-slide");
+                myImg.src = datataPicture;
+                myTitle.textContent = datataName;
+                myTitle.className = "small-titles";
+                myGenre.appendChild(myImg);
+                myGenre.appendChild(myTitle);
+                genre.appendChild(myGenre);
+                }
+    }
+
+};
+requeteGenre.send();
+
+const requetePlaylist = new XMLHttpRequest();
+const urlPlaylist = "https://api.deezer.com/chart/0/playlists";
+
+
+requetePlaylist.open(method, urlPlaylist);
+
+requetePlaylist.onreadystatechange = function(){
+    if(requetePlaylist.readyState === 4 && requetePlaylist.status === 200){
+        // console.log(JSON.parse(requetePlaylist.response))
+        const playlistArray = JSON.parse(requetePlaylist.responseText)
+            for (let i = 0; i < playlistArray.data.length ; i++) {
+                const datataPicture = playlistArray.data[i].picture_medium;
+                const datataName = playlistArray.data[i].title;
+                let myImgPlaylist = document.createElement('img');
+                let myTitlePlaylist = document.createElement('p');
+                let myPlaylist = document.createElement('div');
+                myPlaylist.setAttribute("class", "myDiv swiper-slide");
+                myImgPlaylist.src = datataPicture;
+                myTitlePlaylist.textContent = datataName;
+                myTitlePlaylist.className = "small-titles"
+                myPlaylist.appendChild(myImgPlaylist);
+                myPlaylist.appendChild(myTitlePlaylist);
+                playlist.appendChild(myPlaylist);
+            }
+    }
+
+};
+requetePlaylist.send();

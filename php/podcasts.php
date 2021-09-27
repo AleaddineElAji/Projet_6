@@ -10,6 +10,3 @@
 
 </section>
 
-
-
-<!-- podcastsDiv > podcastsBox > podcastsPicture - podcastsDescDiv > podcastsDesc -->
