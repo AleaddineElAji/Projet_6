@@ -254,6 +254,18 @@ footer{
     transition : 0.5s ease;
 }
 
+h3 {
+    font-size : 1.0rem;
+    color : #fff;
+    font-weight : 900;
+    letter-spacing: 0.1rem;
+    padding: 1.3rem;
+    font-family: 'Urbanist';
+
+}
+.first-word-title{
+    color:#3bc8e7;
+}
 
 
 @media screen and (max-width: 630px){

@@ -3,6 +3,9 @@
     ?>
 <?php include ('php/suggest.php')
     ?>
+<!-- Including the top chart -->
+<?php include ('php/tracklist.php')
+    ?>
 <!-- Including the podcasts -->
 <?php include ('php/podcasts.php')
     ?>
