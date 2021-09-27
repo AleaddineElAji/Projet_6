@@ -5,12 +5,59 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body>
+    <style>
+
+.container{
+    background-color: rgba(10, 40, 80, 0.568);
+    color:ivory;
+}
+.myUl{
+    width:100%;
+}
+.elementLi {
+            margin-top: 50px;
+            height: max-content;
+            margin-bottom: 1%;
+            padding: 1%;
+            border-bottom: 2px solid #999;
+        
+        }
+        .elementLi:hover {
+            margin-top: 50px;
+            /* border-radius: 50%; */
+            /* width: 100%; */
+            height: max-content;
+            margin-bottom: 5px;
+            /* padding: 2%; */
+            background-color: rgba(205, 211, 223, 0.911);
+           
+            animation: bounce 1s infinite alternate;
+            -webkit-animation: bounce 0.5s infinite alternate;
+        }
+        @keyframes bounce {
+            from {
+            transform: translateY(-5px);
+            }
+            to {
+            transform: translateY(-15px);
+            }
+            
+        }
+        @-webkit-keyframes bounce {
+            from {
+            transform: translateY(-5px);
+            }
+            to {
+            transform: translateY(-15px);
+            }
+        }
+    </style>
+
 
     <section id="tracklist">
-        This is my Section
         <!-- <?php include 'php/tracklist.php' ?> -->
     </section>
 
@@ -20,11 +67,13 @@
 // request APIS Deezer
 //
 //****************************************************************************************//
+
+
 // Définition d'éléments communs au deux Top Ten's
 //
 let mySection=document.getElementById('tracklist');
 let myTopContainer = document.createElement('div');
-    myTopContainer.className = "topTenContainer";
+    myTopContainer.className = "container";
     myTopContainer.classList.add("d-flex");
     
 mySection.appendChild(myTopContainer);
@@ -32,31 +81,29 @@ mySection.appendChild(myTopContainer);
 // Définition d'éléments Top Ten Albums (Div + ul)
 //
 let myTopAlbums = document.createElement('div');
-    
     myTopAlbums.className = "topAlbumsDiv";
-    myTopAlbums.classList.add("col-6");
-    
-    let myUlAlbums = document.createElement('ul');
-    myUlAlbums.className = "ulAlbums";
-   
-    myTopAlbums.appendChild(myUlAlbums);
+    myTopAlbums.classList.add("col" ,"topDiv", "d-flex");
 
+let myUlAlbums = document.createElement("ul");
+    myUlAlbums.className = "myUl";
+    
+myTopAlbums.appendChild(myUlAlbums);
 myTopContainer.appendChild(myTopAlbums);
 
 //****************************************************************************************//
-// Définition d'éléments Top Ten Artist (Div + ul) 
+// Définition d'éléments Top Ten Tracks (Div + ul) 
 //
 let myTopTracks = document.createElement('div');
     myTopTracks.className = "topTracksDiv";
-    myTopTracks.classList.add("col-6");
-               
+    myTopTracks.classList.add("col", "topDiv", "d-flex");
     
-let myUlTracks = document.createElement('ul');
-    myUlTracks.className = "ulTracks";
+let myUlTracks = document.createElement("ul");
+    myUlTracks.className = "myUl";   
    
-    myTopTracks.appendChild(myUlTracks);
+    
 
-myTopContainer.appendChild(myTopTracks);
+    myTopTracks.appendChild(myUlTracks);
+    myTopContainer.appendChild(myTopTracks);
 
 
 //****************************************************************************************//
@@ -70,52 +117,15 @@ requeteChart.open(method, url)
 requeteChart.responseType = "json"
 requeteChart.send();
 requeteChart.onload = function(){
+    
     console.log(requeteChart.readyState)
    
      if (requeteChart.readyState == 4){
         if (requeteChart.status == 200){
- 
-    // Top Ten Albums   
-            const monArray = requeteChart.response;
-            
-            console.log(monArray);
-            console.log(monArray.albums.data)
 
-             for (let i=0; i<monArray.albums.data.length; i++){
-                     
-                        albumTitle      = monArray.albums.data[i].title;
-                        albumArtist     =  monArray.albums.data[i].artist.name;
-                        albumImage      =  monArray.albums.data[i].cover_small;
-                        albumPosition   =  monArray.albums.data[i].position;
-                
-                 // creation des LI avec info et Image du Album  
-                       let myLiAlbums = document.createElement('li');
-                           myLiAlbums.style.textDecorationStyle="none";
-                                                    
-                        
-                    // du div Image            
-                        let myAlbumsImgDiv = document.createElement('div');
-                        myAlbumsImgDiv.className = "imgAlbumsDiv";
-                        myAlbumsImgDiv.classList.add("col-3");
+           const monArray = requeteChart.response;
 
-                        let myAlbumImg = document.createElement('img');
-                            myAlbumImg.src = albumImage;
-
-                        myAlbumsImgDiv.appendChild(myAlbumImg);
-                        myLiAlbums.appendChild(myAlbumsImgDiv);
-
-                    // du div text    
-                        let myAlbumsTextDiv = document.createElement('div');
-                            myAlbumsTextDiv.className = "textAlbumsDiv";
-                            myAlbumsTextDiv.classList.add("col-3");
-
-                        myAlbumsTextDiv.innerHTML= albumTitle + "</br>" + albumArtist + " " + albumPosition; 
-                        myLiAlbums.appendChild(myAlbumsTextDiv);
- 
-                    // ajouter li au HTML avec les infos 
-                        myUlAlbums.appendChild(myLiAlbums);
-                }
-
+    //****************************************************************************************//
     // Top Ten Tracks  
                        
             console.log(monArray);
@@ -126,36 +136,53 @@ requeteChart.onload = function(){
                         trackName       = monArray.tracks.data[i].title_short;
                         trackImage      = monArray.tracks.data[i].artist.picture_small;
                         trackPosition   = monArray.tracks.data[i].position;
-                        trackDuration   = monArray.tracks.data[i].duration;
-                       
-                        
+                        if(trackPosition<10){
+                            trackPosition="0"+trackPosition;
+                        }
+                        trackDuration   = (monArray.tracks.data[i].duration)/60;
+                        let minutes = Math.floor(trackDuration);
+                        let secondes = monArray.tracks.data[i].duration % 60;
+                        if(secondes<10){
+                            secondes="0"+secondes;
+                        }
+           
                         trackArtist     = monArray.tracks.data[i].artist.name;
                        
-           
+            //*********************************************
             // creation des LI avec info et Image du Track
                         let myLiTrack = document.createElement('li');
-                            myLiTrack.style.textDecorationLine = "none";
+                            myLiTrack.className = "elementLi";
+                            myLiTrack.classList.add("d-flex");
+                            myLiTrack.style.flexDirection= "row";
                         
-            // creation des DIV's dedans les LI pour le txt et l'image      
+            // creation des DIV's dedans les LI pour la position, le txt et l'image      
+                // du div position    
+                        let myTrackPosDiv = document.createElement('div');
+                            myTrackPosDiv.className = "positionAlbumsDiv";
+                            myTrackPosDiv.classList.add("col-1");
+                            
+                            myTrackPosDiv.innerHTML= trackPosition;
+                            myLiTrack.appendChild(myTrackPosDiv);
 
                 // du div Image            
                         let myTracksImgDiv = document.createElement('div');
-                        myTracksImgDiv.classList.add("col-3");
-                        myTracksImgDiv.className = "imgTracksDiv";
+                            myTracksImgDiv.className = "imgTracksDiv";
+                            myTracksImgDiv.classList.add("col-3");
 
 
                         let myTrackImg = document.createElement('img');
-                        myTrackImg.src = trackImage;
+                            myTrackImg.src = trackImage;
+                        
                         myTracksImgDiv.appendChild(myTrackImg);
-
                         myLiTrack.appendChild(myTracksImgDiv);
             
                 // du div text    
                         let myTracksTextDiv = document.createElement('div');
-                            myTracksTextDiv.classList.add("col-3");
+                            myTracksTextDiv.classList.add("col-8");
                             myTracksTextDiv.className = "textTracksDiv";
                             
-                        myTracksTextDiv.innerHTML= trackPosition + " " + trackName +"</br>" + trackArtist + " " + trackDuration;
+                        myTracksTextDiv.innerHTML= trackName +"</br>" + trackArtist + " " + minutes+":"+secondes;   
+
                         myLiTrack.appendChild(myTracksTextDiv);
                 
                 // ajouter li au HTML avec les infos 
@@ -163,7 +190,62 @@ requeteChart.onload = function(){
 
                        
 
-                    }   
+            }   
+
+    //****************************************************************************************//
+    // Top Ten Albums   
+            console.log(monArray);
+            console.log(monArray.albums.data)
+
+             for (let i=0; i<monArray.albums.data.length; i++){
+
+                        albumTitle      =  monArray.albums.data[i].title;
+                        albumArtist     =  monArray.albums.data[i].artist.name;
+                        albumImage      =  monArray.albums.data[i].cover_small;
+                        albumPosition   =  monArray.albums.data[i].position;
+                        if(albumPosition<10){
+                            albumPosition="0"+albumPosition;
+                        }
+                
+                    //*********************************************
+                    // creation des LI avec  la position, l'Image et le text du Album  
+                       let myLiAlbums = document.createElement('li');
+                           myLiAlbums.className = "elementLi";
+                           myLiAlbums.classList.add("d-flex");
+                           myLiAlbums.style.flexDirection= "row";
+                        
+                    // du div position    
+                        let myAlbumsPosDiv = document.createElement('div');
+                            myAlbumsPosDiv.className = "positionAlbumsDiv";
+                            myAlbumsPosDiv.classList.add("col-1");
+                            
+                            myAlbumsPosDiv.innerHTML= albumPosition;
+                            myLiAlbums.appendChild(myAlbumsPosDiv);
+
+                    // du div Image            
+                        let myAlbumsImgDiv = document.createElement('div');
+                            myAlbumsImgDiv.className = "imgAlbumsDiv";
+                            myAlbumsImgDiv.classList.add("col-3");
+
+                        let myAlbumImg = document.createElement('img');
+                            myAlbumImg.src = albumImage;
+                        
+                        myAlbumsImgDiv.appendChild(myAlbumImg);
+                        myLiAlbums.appendChild(myAlbumsImgDiv);
+
+                    // du div text    
+                        let myAlbumsTextDiv = document.createElement('div');
+                            myAlbumsTextDiv.className = "textAlbumsDiv";
+                            myAlbumsTextDiv.classList.add("col-8");
+
+                        myAlbumsTextDiv.innerHTML= albumTitle + "</br>" + albumArtist; 
+                        myLiAlbums.appendChild(myAlbumsTextDiv);
+ 
+                    // ajouter li au HTML avec les infos 
+                        myUlAlbums.appendChild(myLiAlbums);
+                }
+
+    
          
      }
     }
