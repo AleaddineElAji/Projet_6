@@ -52,6 +52,22 @@
         
         </footer>
         <script src="js/script.js"></script>
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script>   
+            if(window.innerWidth>1400) {
+                var swiper = new Swiper(".mySwiper", {slidesPerView: 5.25, spaceBetween: 47, freeMode: true,});
+                }else if(window.innerWidth>1200){
+                    var swiper = new Swiper(".mySwiper", {slidesPerView: 5, spaceBetween: 30, freeMode: true,});
+                }else if(window.innerWidth>1000){
+                    var swiper = new Swiper(".mySwiper", {slidesPerView: 3.25, spaceBetween: 30, freeMode: true,});
+                }else if(window.innerWidth>660){
+                    var swiper = new Swiper(".mySwiper", {slidesPerView: 2.50, spaceBetween: 33, freeMode: true,});
+                }else if(window.innerWidth>350){
+                    var swiper = new Swiper(".mySwiper", {slidesPerView: 1.40, spaceBetween: 30, freeMode: true,});
+                }else if(window.innerWidth>250){
+                    var swiper = new Swiper(".mySwiper", {slidesPerView: 1.20, spaceBetween: 30, freeMode: true,});
+                }
+    </script>
     </body>
 
 </html>

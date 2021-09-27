@@ -43,6 +43,7 @@ requeteRadios.onreadystatechange = function(){
 
             let podcastsBox = document.createElement("div");
             podcastsBox.style = "position : relative;";
+            podcastsBox.className = "swiper-slide";
             let podcastsPicture = document.createElement("img");
             // appending the source of the images in the element
             podcastsPicture.src = podcastsImg;
@@ -55,7 +56,7 @@ requeteRadios.onreadystatechange = function(){
             podcastsBox.appendChild(podcastsPicture); // appending the image in that div
             podcastsDescDiv.appendChild(podcastsDesc); // appending the textnode created previously in the description div
             // podcastsDescDiv.style = "position: absolute; bottom: 0;left: 0;height: 0px;width: 100%;transition: .5s ease;background-color: #3bc8e7;overflow: hidden;"
-            podcastsDescDiv.className = "overlay"
+            podcastsDescDiv.className = "overlay";
             podcastsBox.appendChild(podcastsDescDiv); // appending the description div to the box div, that one is visible only when mouseover is triggered
             
             

@@ -252,6 +252,7 @@ footer{
     height : 100%;
     opacity: 1;
     transition : 0.5s ease;
+    width: 250px;
 }
 
 h3 {
@@ -266,7 +267,15 @@ h3 {
 .first-word-title{
     color:#3bc8e7;
 }
-
+#main-podcasts {
+    display: flex;
+    overflow: hidden;
+    flex-direction: row;
+    width: max-content;
+}
+#podcasts {
+    overflow: hidden;
+}
 
 @media screen and (max-width: 630px){
     #catchphrase{
