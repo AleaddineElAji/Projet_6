@@ -3,15 +3,16 @@
 @font-face {
     font-family: 'urbanistregular';
     src: url('../fonts/urbanist-variablefont_wght-webfont.woff2') format('woff2'),
-         url('../fonts/urbanist-variablefont_wght-webfont.woff') format('woff');
+        url('../fonts/urbanist-variablefont_wght-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
 }
+
 @font-face {
     font-family: 'robotoblack';
     src: url('../fonts/roboto-black-webfont.woff2') format('woff2'),
-         url('../fonts/roboto-black-webfont.woff') format('woff');
+        url('../fonts/roboto-black-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -20,9 +21,9 @@
 /* Main nodes changes */
 
 body {
-    font-family : 'urbanistregular';
+    font-family: 'urbanistregular';
     background-color: #16151a;
-    max-width : 1440px;
+    max-width: 1440px;
     margin: auto;
 }
 
@@ -33,208 +34,244 @@ header {
     background-repeat: no-repeat;
     height: 100vh;
     /* border: red 1px solid; */
-    padding : 0;
-}
-h1{
-    font-family: 'Urbanist';
-    font-weight: 900;
-    font-size : 5rem;
-    color:#3bc8e7;
-}
-a{
-    text-decoration: none;
-}
-a:hover{
-    text-decoration: none;
-    color : #fff
-}
-a:visited{
-    text-decoration: none;
-    color : #fff
-}
-footer{
-    background: linear-gradient(0deg, rgba(196,196,196,0) 0%, rgba(155,155,155,0) 27%, rgba(151,151,151,0) 59%, rgba(119,119,119,0) 73%, rgba(0,0,0,0.47) 100%);
-    height: fit-content;
-}
-/* HEADER */
-.container-fluid{
     padding: 0;
 }
-.navbar-nav{
-    height : 64px;
+
+h1 {
+    font-family: 'Urbanist';
+    font-weight: 900;
+    font-size: 5rem;
+    color: #3bc8e7;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #fff
+}
+
+a:visited {
+    text-decoration: none;
+    color: #fff
+}
+
+footer {
+    background: linear-gradient(0deg, rgba(196, 196, 196, 0) 0%, rgba(155, 155, 155, 0) 27%, rgba(151, 151, 151, 0) 59%, rgba(119, 119, 119, 0) 73%, rgba(0, 0, 0, 0.47) 100%);
+    height: fit-content;
+}
+
+/* HEADER */
+.container-fluid {
+    padding: 0;
+}
+
+.navbar-nav {
+    height: 64px;
     background-color: #fff;
 }
-.menu-btn{
-    width : 64px;
+
+.menu-btn {
+    width: 64px;
     height: 64px;
-    background-color: #3bc8e7 ;
+    background-color: #3bc8e7;
 }
-.menu-btn img{
-    width : 20px;
+
+.menu-btn img {
+    width: 20px;
 }
-.logo img{
+
+.logo img {
     width: 25px;
-    
+
 }
-.logo{
+
+.logo {
     flex-wrap: nowrap;
 }
-.brand{
+
+.brand {
     font-weight: 700;
-    color:#3bc8e7;
+    color: #3bc8e7;
     line-height: 1.2rem;
     margin: 0;
 }
-.sub-brand{
+
+.sub-brand {
     font-weight: 200;
 }
-#catchphrase{
-    height:calc(100vh - 64px);
+
+#catchphrase {
+    height: calc(100vh - 64px);
     padding-left: 5rem;
     padding-bottom: 5rem;
 }
-#searchfield{
+
+#searchfield {
     background-color: #f0f5f9;
     padding: 2px;
 }
-#searchfield input{
+
+#searchfield input {
     /* flex-grow : 2; */
     border: none;
     background-color: #f0f5f9;
     padding: 0.3rem;
-    padding-left : 1rem;
-    width : 23vw;
+    padding-left: 1rem;
+    width: 23vw;
 }
-#searchfield button{
-    border : none;
+
+#searchfield button {
+    border: none;
     background-color: #3bc8e7;
     height: 28px;
     width: 28px;
-    margin:auto;
+    margin: auto;
     border-radius: 3px;
 }
-.searchsong{
+
+.searchsong {
     height: 35px;
     width: 35px;
     border: 2px solid #3bc8e7;
     border-radius: 50%;
 }
+
 .loupe {
     height: 25px;
 }
-#account img{
-    height : 35px;
-    margin-left : 2rem;
-    margin-right : 1rem;
+
+#account img {
+    height: 35px;
+    margin-left: 2rem;
+    margin-right: 1rem;
 }
-#login{
-    color:#3bc8e7;
+
+#login {
+    color: #3bc8e7;
     font-weight: 900;
 }
-::placeholder{
-    color:#3bc8e7;
+
+::placeholder {
+    color: #3bc8e7;
     font-size: 0.9rem;
 }
+
 .start-listening {
     background-color: #3bc8e7;
     border: solid 2px #3bc8e7;
     font-size: 0.9rem;
     padding-left: 2rem;
     padding-right: 2rem;
-    padding-top : 0.7rem;
+    padding-top: 0.7rem;
     padding-bottom: 0.7rem;
-    color : #fff;
+    color: #fff;
     font-weight: 600;
 }
-.subscribe{
+
+.subscribe {
     border: solid 2px #3bc8e7;
     color: #fff;
     padding-left: 4.3rem;
     padding-right: 4.3rem;
-    padding-top : 0.7rem;
+    padding-top: 0.7rem;
     padding-bottom: 0.7rem;
     font-weight: 600;
     font-size: 0.9rem;
 }
+
 /* footer */
-.newsletter{
-    font-size : 0.9rem;
+.newsletter {
+    font-size: 0.9rem;
     font-weight: 600;
     letter-spacing: 0.2rem;
 }
-.brand-footer{
+
+.brand-footer {
     font-weight: 600;
     font-size: 0.8rem;
-    margin:0;
+    margin: 0;
     line-height: 0.9rem;
 }
-.sub-brand-footer{
-    font-weight:300;
+
+.sub-brand-footer {
+    font-weight: 300;
     margin: 0;
 }
-.description-footer{
+
+.description-footer {
     padding-top: 0.8rem;
-    font-size: 0.8rem;;
+    font-size: 0.8rem;
+    ;
 }
-.sign-info-footer{
+
+.sign-info-footer {
     font-size: 0.9rem;
 }
-#sign-footer{
+
+#sign-footer {
     background-color: #3bc8e7;
-    font-weight:600;
+    font-weight: 600;
     font-size: 0.9rem;
-    border : none;
+    border: none;
     padding: 1.8rem;
     padding-top: 0.6rem;
     padding-bottom: 0.6rem;
 }
-.call{
+
+.call {
     background-color: #3bc8e7;
     height: 35px;
     width: 35px;
     padding: 0.3rem;
 }
-.contact-us{
+
+.contact-us {
     line-height: 1rem;
     font-size: 0.8rem;
     letter-spacing: 0.1rem;
-   
+
 }
-.contact-us p{
+
+.contact-us p {
     padding-left: 1.5rem;
 }
-.phone-number{
-    color:#3bc8e7;
+
+.phone-number {
+    color: #3bc8e7;
     font-weight: 700;
 }
 
 /* Top artist section */
- #artist-banner{
-     height: 400px;
-     max-width : 1440px ;
-     background-size: cover;
-     background-position:center;
-     background-repeat: no-repeat;
-     line-height: 1.6rem;
-     padding-left : 5rem;
-     padding-bottom : 6rem;
- }
+#artist-banner {
+    height: 400px;
+    max-width: 1440px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    line-height: 1.6rem;
+    padding-left: 5rem;
+    padding-bottom: 6rem;
+}
 
- .discover-artist{
-     color : #fff;
-     font-weight: 800;
-     font-size : 2rem;
-     font-family: 'robotoblack';
-     filter: drop-shadow(1px 3px 2px rgba(0, 0, 0, 0.411));
- }
+.discover-artist {
+    color: #fff;
+    font-weight: 800;
+    font-size: 2rem;
+    font-family: 'robotoblack';
+    filter: drop-shadow(1px 3px 2px rgba(0, 0, 0, 0.411));
+}
+
 #artist-banner img {
     height: 4rem;
-    
+
 }
 
 /* Podcasts section */
 
-    /* the class when my div is hidden */
+/* the class when my div is hidden */
 .overlay {
     position: absolute;
     bottom: 0;
@@ -246,89 +283,139 @@ footer{
     color: #fff;
     opacity: 0;
     overflow: hidden;
-    font-size : 0.8rem;
+    font-size: 0.8rem;
 }
-    /* the class toggled when the mouseover event is triggered */
+
+/* the class toggled when the mouseover event is triggered */
 .hoverlay {
-    height : 100%;
+    height: 100%;
     opacity: 1;
-    transition : 0.5s ease;
+    transition: 0.5s ease;
     width: 250px;
-    padding : 10px;
+    padding: 10px;
 }
 
 h3 {
-    font-size : 1.0rem;
-    color : #fff;
-    font-weight : 900;
+    font-size: 1.0rem;
+    color: #fff;
+    font-weight: 900;
     letter-spacing: 0.1rem;
     padding: 1.3rem;
     font-family: 'Urbanist';
 
 }
-.first-word-title{
-    color:#3bc8e7;
+
+.first-word-title {
+    color: #3bc8e7;
 }
 
-#main-podcasts {
-}
+#main-podcasts {}
 
-#genre{
+#genre {
     display: flex;
     overflow-x: hidden;
     flex-direction: row;
     width: max-content;
     color: #fff;
-    font-size : 0.8rem;
-    margin-bottom : 5rem;
+    font-size: 0.8rem;
+    margin-bottom: 5rem;
 }
 
-#playlist{
+#playlist {
     display: flex;
     overflow: hidden;
     flex-direction: row;
     width: max-content;
 }
+
 #podcasts {
     overflow: hidden;
 }
 
 .small-titles {
-    color : #fff;
-    font-size : 0.8rem;
-    font-weight : 900;
-    padding-top : 0.4rem;
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 900;
+    padding-top: 0.4rem;
 }
 
 #podcasts {
     margin-bottom: 5rem;
-    
+
 }
 
-@media screen and (max-width: 630px){
-    #catchphrase{
+@media screen and (max-width: 630px) {
+    #catchphrase {
         padding-left: 14vw;
         padding-bottom: 20vw;
     }
 }
 
-#genre div{
+#genre div {
     margin: 0;
 }
 
-#playlist div{
+#playlist div {
     margin: 0;
 }
 
-.section1{
+.section1 {
     overflow: hidden;
-    margin-top : 3rem;
+    margin-top: 3rem;
 }
 
 
-.myDiv img{
+.myDiv img {
     display: block;
     object-fit: cover;
     width: 184px;
     height: 184px;
+}
+
+/* Alfonso */
+
+#tracklist {
+    
+    background: linear-gradient(0deg, rgba(0,0,0,0.4654236694677871) 0%, rgba(196,196,196,0.14049369747899154) 13%, rgba(196,196,196,0.16010154061624648) 47%, rgba(196,196,196,0.15730042016806722) 84%, rgba(0,0,0,0.47102591036414565) 100%);
+    
+}
+
+.myUl {
+    width: 100%;
+}
+
+.elementLi {
+    padding-top : 1.2rem;
+    padding-bottom : 0.9rem;
+    padding-left : 0.3rem;
+    height: max-content;
+    border-bottom: 1px solid rgb(116, 109, 109);
+}
+
+.elementLi:hover {
+    
+    height: max-content;
+    
+    background-color: rgba(116,109, 109, 0.750);
+}
+
+
+li {
+    color : #fff!important;
+}
+
+.blue {
+    color : #3bc8e7;
+    font-weight: 400;
+}
+
+.textTracksDiv p, .textAlbumsDiv p {
+    line-height : 1.2rem;
+    margin-bottom: 0;
+    font-weight: 800;
+}
+
+.position-font{
+    font-family: 'urbanistregular' ;
+    font-weight: 800;
 }

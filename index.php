@@ -15,10 +15,6 @@
 <!-- Including the podcasts -->
 <?php include ('php/podcasts.php')
     ?>
-    <!-- Including the footer -->
+<!-- Including the footer -->
 <?php include ('php/footer.php') 
     ?>
-
-
-    
-
