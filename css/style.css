@@ -169,6 +169,9 @@ footer {
     padding-bottom: 0.7rem;
     color: #fff;
     font-weight: 600;
+    margin-bottom: 2rem;
+    display: block;
+    width: fit-content;
 }
 
 .subscribe {
@@ -344,13 +347,6 @@ h3 {
 
 }
 
-@media screen and (max-width: 630px) {
-    #catchphrase {
-        padding-left: 14vw;
-        padding-bottom: 20vw;
-    }
-}
-
 #genre div {
     margin: 0;
 }
@@ -428,4 +424,16 @@ li {
 .position-font{
     font-family: 'urbanistregular' ;
     font-weight: 800;
+}
+/* MEDIA QUERIES */
+@media screen and (max-width: 630px) {
+    #catchphrase {
+        padding-left: 14vw;
+        padding-bottom: 20vw;
+    }
+}
+@media screen and (max-width: 350px){
+    .sub-brand, .brand{
+        display: none;
+    }
 }

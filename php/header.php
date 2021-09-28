@@ -24,7 +24,7 @@
             <div class="menu-btn d-flex justify-content-center col-2">
                 <img src="img/menuburger.svg" alt="Menu Burger">
             </div>
-            <div class="d-flex col-6 logo ps-3 align-items-center">
+            <div class="d-flex col-5 logo ps-3 align-items-center">
                 <img src="img/logo.svg" alt="logo du site">
                 <p class="ms-3 brand">Music Band <br>
                     <span class="sub-brand">La musique au bout des doigts</span></p>
@@ -34,7 +34,7 @@
                 <button type="submit"><img src="img/headphones.svg" alt="Bouton de recherche de musique"></button>
             </form>
             <!-- Note pour plus tard, au clic le bouton suivant affiche la barre de recherche qui a disparue -->
-            <div class="searchsong d-flex d-block d-md-none">
+            <div class="searchsong d-flex d-block d-md-none col-1">
                 <img src="img/loupe.svg" alt="Loupe pour rechercher" class="loupe m-auto">
             </div>
             <div id="account">
