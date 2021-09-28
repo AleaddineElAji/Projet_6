@@ -1,7 +1,5 @@
 <!-- Including the head and header -->
-<?php include ('php/header.php') 
-    ?>
-
+<?php include ('php/header.php') ?>
 <!-- Including the genre selection part -->
 <section id="genre">
     <?php include 'php/genre.php' ?>
@@ -28,4 +26,4 @@
 <!-- Including the footer -->
 <?php include 'php/footer.php' ?>
     
-<!-- testalaedin -->
+
