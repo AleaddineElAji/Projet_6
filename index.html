@@ -8,10 +8,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body>
-    <style>
+    
+    
+<style>
 
-.container{
-    background-color: rgba(10, 40, 80, 0.568);
+#trackList{
+    background-color:rgba(0, 0, 0, 0.582) !important;
     color:ivory;
 }
 .myUl{
@@ -22,39 +24,34 @@
             height: max-content;
             margin-bottom: 1%;
             padding: 1%;
-            border-bottom: 2px solid #999;
-        
+            border-bottom: 2px solid rgb(116, 109, 109);
+                    
         }
         .elementLi:hover {
             margin-top: 50px;
-            /* border-radius: 50%; */
-            /* width: 100%; */
             height: max-content;
             margin-bottom: 5px;
-            /* padding: 2%; */
             background-color: rgba(205, 211, 223, 0.911);
-           
-            animation: bounce 1s infinite alternate;
+            animation: bounce 0.5s infinite alternate;
             -webkit-animation: bounce 0.5s infinite alternate;
+           
         }
         @keyframes bounce {
             from {
-            transform: translateY(-5px);
-            }
-            to {
-            transform: translateY(-15px);
+                transform: translateY(-5px);
+            } to {
+                transform: translateY(-15px);
             }
             
         }
         @-webkit-keyframes bounce {
             from {
-            transform: translateY(-5px);
-            }
-            to {
-            transform: translateY(-15px);
+                transform: translateY(-5px);
+            } to {
+                transform: translateY(-15px);
             }
         }
-    </style>
+</style>
 
 
     <section id="tracklist">
@@ -67,7 +64,6 @@
 // request APIS Deezer
 //
 //****************************************************************************************//
-
 
 // Définition d'éléments communs au deux Top Ten's
 //
@@ -100,8 +96,6 @@ let myTopTracks = document.createElement('div');
 let myUlTracks = document.createElement("ul");
     myUlTracks.className = "myUl";   
    
-    
-
     myTopTracks.appendChild(myUlTracks);
     myTopContainer.appendChild(myTopTracks);
 
@@ -148,18 +142,21 @@ requeteChart.onload = function(){
            
                         trackArtist     = monArray.tracks.data[i].artist.name;
                        
-            //*********************************************
+            //*********************************************************************************//
             // creation des LI avec info et Image du Track
                         let myLiTrack = document.createElement('li');
                             myLiTrack.className = "elementLi";
                             myLiTrack.classList.add("d-flex");
                             myLiTrack.style.flexDirection= "row";
-                        
-            // creation des DIV's dedans les LI pour la position, le txt et l'image      
+                            myLiTrack.style.height="75px";
+            
+            //**********************************
+            // creation des DIV's dedans les LI 
                 // du div position    
                         let myTrackPosDiv = document.createElement('div');
                             myTrackPosDiv.className = "positionAlbumsDiv";
                             myTrackPosDiv.classList.add("col-1");
+                            myTrackPosDiv.style.width="50px";
                             
                             myTrackPosDiv.innerHTML= trackPosition;
                             myLiTrack.appendChild(myTrackPosDiv);
@@ -168,6 +165,7 @@ requeteChart.onload = function(){
                         let myTracksImgDiv = document.createElement('div');
                             myTracksImgDiv.className = "imgTracksDiv";
                             myTracksImgDiv.classList.add("col-3");
+                            myTracksImgDiv.style.width="120px";
 
 
                         let myTrackImg = document.createElement('img');
@@ -178,19 +176,29 @@ requeteChart.onload = function(){
             
                 // du div text    
                         let myTracksTextDiv = document.createElement('div');
-                            myTracksTextDiv.classList.add("col-8");
+                            myTracksTextDiv.classList.add("col-3");
                             myTracksTextDiv.className = "textTracksDiv";
+                            myTracksTextDiv.style.width="300px";
                             
-                        myTracksTextDiv.innerHTML= trackName +"</br>" + trackArtist + " " + minutes+":"+secondes;   
+                        myTracksTextDiv.innerHTML=  "<h6>"+trackName + "</h6>"  + "<p>"+trackArtist +"</p>";   
+                                   
 
                         myLiTrack.appendChild(myTracksTextDiv);
+
+                // du div duration
+                        let myTracksDurationDiv = document.createElement('div');
+                        myTracksDurationDiv.classList.add("col-1");
+                        myTracksDurationDiv.className = "durationTracksDiv";
+                        myTracksDurationDiv.style.textAlign="right";
+                        myTracksDurationDiv.style.marginLeft="50px";
+
+                        myTracksDurationDiv.innerHTML= minutes+":"+secondes;
+                        myLiTrack.appendChild(myTracksDurationDiv);
                 
-                // ajouter li au HTML avec les infos 
+                // ajouter li au HTML 
                         myUlTracks.appendChild(myLiTrack);
 
-                       
-
-            }   
+             }   
 
     //****************************************************************************************//
     // Top Ten Albums   
@@ -213,11 +221,13 @@ requeteChart.onload = function(){
                            myLiAlbums.className = "elementLi";
                            myLiAlbums.classList.add("d-flex");
                            myLiAlbums.style.flexDirection= "row";
+                           myLiAlbums.style.height="75px";
                         
                     // du div position    
                         let myAlbumsPosDiv = document.createElement('div');
                             myAlbumsPosDiv.className = "positionAlbumsDiv";
                             myAlbumsPosDiv.classList.add("col-1");
+                            // myAlbumsPosDiv.style.width="50px";
                             
                             myAlbumsPosDiv.innerHTML= albumPosition;
                             myLiAlbums.appendChild(myAlbumsPosDiv);
@@ -226,6 +236,7 @@ requeteChart.onload = function(){
                         let myAlbumsImgDiv = document.createElement('div');
                             myAlbumsImgDiv.className = "imgAlbumsDiv";
                             myAlbumsImgDiv.classList.add("col-3");
+                            // myAlbumsImgDiv.style.width="110px";
 
                         let myAlbumImg = document.createElement('img');
                             myAlbumImg.src = albumImage;
@@ -237,8 +248,9 @@ requeteChart.onload = function(){
                         let myAlbumsTextDiv = document.createElement('div');
                             myAlbumsTextDiv.className = "textAlbumsDiv";
                             myAlbumsTextDiv.classList.add("col-8");
+                            // myAlbumsTextDiv.style.width="295px";
 
-                        myAlbumsTextDiv.innerHTML= albumTitle + "</br>" + albumArtist; 
+                        myAlbumsTextDiv.innerHTML= "<h6>"+ albumTitle + "</h6>" +  "<p>"+albumArtist+"</p>"; 
                         myLiAlbums.appendChild(myAlbumsTextDiv);
  
                     // ajouter li au HTML avec les infos 
