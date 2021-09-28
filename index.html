@@ -148,7 +148,7 @@ requeteChart.onload = function(){
                             myLiTrack.className = "elementLi";
                             myLiTrack.classList.add("d-flex");
                             myLiTrack.style.flexDirection= "row";
-                            myLiTrack.style.height="75px";
+                            myLiTrack.style.height="70px";
             
             //**********************************
             // creation des DIV's dedans les LI 
@@ -180,7 +180,7 @@ requeteChart.onload = function(){
                             myTracksTextDiv.className = "textTracksDiv";
                             myTracksTextDiv.style.width="300px";
                             
-                        myTracksTextDiv.innerHTML=  "<h6>"+trackName + "</h6>"  + "<p>"+trackArtist +"</p>";   
+                        myTracksTextDiv.innerHTML=  "<h6>"+trackName + "</h6>"  + "<p>" + trackArtist + "</p>";   
                                    
 
                         myLiTrack.appendChild(myTracksTextDiv);
@@ -221,7 +221,7 @@ requeteChart.onload = function(){
                            myLiAlbums.className = "elementLi";
                            myLiAlbums.classList.add("d-flex");
                            myLiAlbums.style.flexDirection= "row";
-                           myLiAlbums.style.height="75px";
+                           myLiAlbums.style.height="70px";
                         
                     // du div position    
                         let myAlbumsPosDiv = document.createElement('div');
@@ -250,7 +250,7 @@ requeteChart.onload = function(){
                             myAlbumsTextDiv.classList.add("col-8");
                             // myAlbumsTextDiv.style.width="295px";
 
-                        myAlbumsTextDiv.innerHTML= "<h6>"+ albumTitle + "</h6>" +  "<p>"+albumArtist+"</p>"; 
+                        myAlbumsTextDiv.innerHTML= "<h6>"+ albumTitle + "</h6>" +  "<p>" + albumArtist + "</p>"; 
                         myLiAlbums.appendChild(myAlbumsTextDiv);
  
                     // ajouter li au HTML avec les infos 
