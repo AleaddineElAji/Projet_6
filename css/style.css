@@ -372,11 +372,11 @@ h3 {
     height: 184px;
 }
 
-/* Alfonso */
+/* Tracklist */
 
 #tracklist {
-    
-    background: linear-gradient(0deg, rgba(0,0,0,0.4654236694677871) 0%, rgba(196,196,196,0.14049369747899154) 13%, rgba(196,196,196,0.16010154061624648) 47%, rgba(196,196,196,0.15730042016806722) 84%, rgba(0,0,0,0.47102591036414565) 100%);
+    background: linear-gradient(0deg, rgba(22,21,26,1) 5%, rgba(196,196,196,0.14329481792717091) 31%, rgba(196,196,196,0.17130602240896353) 47%, rgba(196,196,196,0.15730042016806722) 67%, rgba(0,0,0,0.47102591036414565) 100%);
+    margin-bottom: 6rem;
     
 }
 
@@ -388,20 +388,30 @@ h3 {
     padding-top : 1.2rem;
     padding-bottom : 0.9rem;
     padding-left : 0.3rem;
+    padding-right : 2rem;
     height: max-content;
-    border-bottom: 1px solid rgb(116, 109, 109);
+    /* border-bottom: 1px solid rgb(116, 109, 109); */
 }
 
-.elementLi:hover {
-    
-    height: max-content;
-    
-    background-color: rgba(116,109, 109, 0.750);
-}
+.hoverli{
+    height : 1px;
+    width : 95%;
+    background-color: #c4c4c462;
+    position: absolute;
+    bottom: 0;
+    transition : 0.3s;
 
+}
+.hoverli-triggered{
+    height : 100%;
+    background-color :#3bc7e77e;
+    transition : 0.3s;
+    
+}
 
 li {
     color : #fff!important;
+    position:relative;
 }
 
 .blue {

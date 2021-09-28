@@ -229,6 +229,10 @@ requeteChart.onload = function () {
                 myLiTrack.style = "align-items : center;"
                 myLiTrack.classList.add("d-flex");
                 myLiTrack.style.flexDirection = "row";
+                let myLittleDivHidden = document.createElement('div');
+                myLittleDivHidden.className = "hoverli";
+                
+
                 
 
                 //**********************************
@@ -258,7 +262,7 @@ requeteChart.onload = function () {
                 // du div text    
                 let myTracksTextDiv = document.createElement('div');
                 
-                myTracksTextDiv.classList.add("textTracksDiv", "col-8", "px-3");
+                myTracksTextDiv.classList.add("textTracksDiv", "col-8", "px-3", "flex-shrink-1");
                 
 
                 myTracksTextDiv.innerHTML = "<p>" + trackName + '<br/><span class="blue">' + trackArtist +"</span></p>";
@@ -278,6 +282,14 @@ requeteChart.onload = function () {
 
                 // ajouter li au HTML 
                 myUlTracks.appendChild(myLiTrack);
+                myLiTrack.appendChild(myLittleDivHidden);
+
+                myLiTrack.addEventListener("mouseover", ()=>{
+                    myLittleDivHidden.classList.add("hoverli-triggered")
+                })
+                myLiTrack.addEventListener("mouseout", ()=>{
+                    myLittleDivHidden.classList.remove("hoverli-triggered")
+                })
 
             }
 
@@ -303,6 +315,8 @@ requeteChart.onload = function () {
                 myLiAlbums.style = "align-items : center;"
                 myLiAlbums.classList.add("d-flex");
                 myLiAlbums.style.flexDirection = "row";
+                let myLittleDivHidden = document.createElement('div');
+                myLittleDivHidden.className = "hoverli";
                 
 
                 // du div position    
@@ -338,6 +352,15 @@ requeteChart.onload = function () {
 
                 // ajouter li au HTML avec les infos 
                 myUlAlbums.appendChild(myLiAlbums);
+                myLiAlbums.appendChild(myLittleDivHidden);
+
+                myLiAlbums.addEventListener("mouseover", ()=>{
+                    myLittleDivHidden.classList.add("hoverli-triggered")
+                })
+                myLiAlbums.addEventListener("mouseout", ()=>{
+                    myLittleDivHidden.classList.remove("hoverli-triggered")
+                })
+                
             }
 
 
@@ -345,3 +368,4 @@ requeteChart.onload = function () {
         }
     }
 };
+
