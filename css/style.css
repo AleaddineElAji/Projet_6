@@ -312,7 +312,10 @@ h3 {
     color: #3bc8e7;
 }
 
-#main-podcasts {}
+#main-podcasts {
+    width : max-content;
+}
+
 
 #genre {
     display: flex;

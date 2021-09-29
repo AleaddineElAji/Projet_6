@@ -204,6 +204,20 @@ requeteChart.onload = function () {
 
             console.log(monArray);
             console.log(monArray.tracks.data)
+            let topTracksTitleEmphasis = document.createTextNode("Top 10 ");
+            let topTracksTitleEnd = document.createTextNode("des morceaux les plus écoutés");
+            let topTracksTitle = document.createElement('h3');
+            let topTracksTitleSpan = document.createElement('span');
+
+            topTracksTitleSpan.appendChild(topTracksTitleEmphasis);
+            topTracksTitle.appendChild(topTracksTitleSpan);
+            topTracksTitle.appendChild(topTracksTitleEnd);
+            
+            topTracksTitleSpan.className = "first-word-title";
+            topTracksTitle.className = "order-1";
+
+            myUlTracks.appendChild(topTracksTitle);
+            
 
             for (let i = 0; i < monArray.tracks.data.length; i++) {
 
@@ -298,6 +312,20 @@ requeteChart.onload = function () {
             console.log(monArray);
             console.log(monArray.albums.data)
 
+            let topAlbumsTitleEmphasis = document.createTextNode("Top 10 ");
+            let topAlbumsTitleEnd = document.createTextNode("des albums les plus écoutés");
+            let topAlbumsTitle = document.createElement('h3');
+            let topAlbumsTitleSpan = document.createElement('span');
+
+            topAlbumsTitleSpan.appendChild(topAlbumsTitleEmphasis);
+            topAlbumsTitle.appendChild(topAlbumsTitleSpan);
+            topAlbumsTitle.appendChild(topAlbumsTitleEnd);
+            
+            topAlbumsTitleSpan.className = "first-word-title";
+            topAlbumsTitle.className = "order-1";
+
+            myUlAlbums.appendChild(topAlbumsTitle);
+
             for (let i = 0; i < monArray.albums.data.length; i++) {
 
                 albumTitle = monArray.albums.data[i].title;
@@ -362,8 +390,6 @@ requeteChart.onload = function () {
                 })
                 
             }
-
-
 
         }
     }
