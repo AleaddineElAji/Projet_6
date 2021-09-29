@@ -1,5 +1,6 @@
 <section class="section1">
-    <div class="swiper mySwiper ">
+    <h3>Genre</h3>
+    <div class="swiper mySwiperA ">
         <div  id="genre" class="swiper-wrapper"></div>
     </div>
 </section>
