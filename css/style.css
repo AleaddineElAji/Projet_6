@@ -363,7 +363,9 @@ h3 {
 .section1 {
     overflow: hidden;
 }
-
+.section2{
+    overflow: hidden;
+}
 
 .myDiv img {
     display: block;
