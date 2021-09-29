@@ -23,8 +23,6 @@ requete.onreadystatechange = function () {
         topArtist.appendChild(nameOfArtist);
 
 
-    } else {
-        console.log("Une erreur est survenue")
     }
 };
 requete.send()
@@ -47,6 +45,7 @@ requeteRadios.onreadystatechange = function () {
             let podcastsPicture = document.createElement("img");
             // appending the source of the images in the element
             podcastsPicture.src = podcastsImg;
+            podcastsPicture.alt = "Illustration des podcasts"
             let podcastsDescDiv = document.createElement("div");
             // creating a Node of Text so I can append it later
             let podcastsDesc = document.createTextNode(podcastsArray.podcasts.data[i].description);
@@ -97,6 +96,7 @@ requeteGenre.onreadystatechange = function () {
             let myGenre = document.createElement('div');
             myGenre.setAttribute("class", "myDiv swiper-slide");
             myImg.src = datataPicture;
+            myImg.alt = "Illustration des genres"
             myTitle.textContent = datataName;
             myTitle.className = "small-titles";
             myGenre.appendChild(myImg);
@@ -126,6 +126,7 @@ requetePlaylist.onreadystatechange = function () {
             let myPlaylist = document.createElement('div');
             myPlaylist.setAttribute("class", "myDiv swiper-slide");
             myImgPlaylist.src = datataPicture;
+            myImgPlaylist.alt = "Illustration des playlists"
             myTitlePlaylist.textContent = datataName;
             myTitlePlaylist.className = "small-titles"
             myPlaylist.appendChild(myImgPlaylist);
@@ -259,6 +260,7 @@ requeteChart.onload = function () {
 
                 myTrackPosDiv.innerHTML = trackPosition;
                 myLiTrack.appendChild(myTrackPosDiv);
+                myTrackPosDiv.classList.add("d-none", "d-lg-block")
 
                 // du div Image            
                 let myTracksImgDiv = document.createElement('div');
@@ -269,6 +271,7 @@ requeteChart.onload = function () {
 
                 let myTrackImg = document.createElement('img');
                 myTrackImg.src = trackImage;
+                myTrackImg.alt = "Illustration des artistes"
 
                 myTracksImgDiv.appendChild(myTrackImg);
                 myLiTrack.appendChild(myTracksImgDiv);
@@ -364,6 +367,7 @@ requeteChart.onload = function () {
 
                 let myAlbumImg = document.createElement('img');
                 myAlbumImg.src = albumImage;
+                myAlbumImg.alt = "Illustration des albums"
 
                 myAlbumsImgDiv.appendChild(myAlbumImg);
                 myLiAlbums.appendChild(myAlbumsImgDiv);
