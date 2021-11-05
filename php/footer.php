@@ -51,6 +51,15 @@
             </div>
         
         </footer>
+        <div id="dz-root"></div>
+
+        <script src="https://e-cdns-files.dzcdn.net/js/min/dz.js"></script>
+        <script>
+	    DZ.init({
+		    appId  : '508702',
+		    channelUrl : 'dylanc903.promo-93.codeur.online/music-band/'
+	    });
+</script>
         <script src="js/script.js"></script>
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
         <script>   
