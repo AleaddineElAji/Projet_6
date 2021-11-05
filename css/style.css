@@ -6,6 +6,7 @@
         url('../fonts/urbanist-variablefont_wght-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 
 }
 
@@ -15,6 +16,7 @@
         url('../fonts/roboto-black-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 
 }
 
@@ -29,10 +31,8 @@ body {
 
 header {
     background-image: url(../img/bg-hero.png);
-    background-size: cover;
-    background-position: center;
     background-repeat: no-repeat;
-    height: 100vh;
+    height: 50rem;
     /* border: red 1px solid; */
     padding: 0;
 }
@@ -104,10 +104,14 @@ footer {
 }
 
 #catchphrase {
-    height: calc(100vh - 64px);
+    height: calc(50rem - 120px);
     padding-left: 5rem;
-    padding-bottom: 5rem;
 }
+
+.swiper-slide {
+    width : fit-content!important;
+}
+
 
 #searchfield {
     background-color: #f0f5f9;
@@ -170,7 +174,6 @@ footer {
     color: #fff;
     font-weight: 600;
     margin-bottom: 2rem;
-    display: block;
     width: fit-content;
 }
 
@@ -360,9 +363,10 @@ h3 {
 
 .section1 {
     overflow: hidden;
-    margin-top: 3rem;
 }
-
+.section2{
+    overflow: hidden;
+}
 
 .myDiv img {
     display: block;
@@ -434,7 +438,11 @@ li {
         padding-left: 14vw;
         padding-bottom: 20vw;
     }
+    .start-listening {
+        display: block;
+    }
 }
+
 @media screen and (max-width: 350px){
     .sub-brand, .brand{
         display: none;

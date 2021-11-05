@@ -20,7 +20,7 @@
                     <p>Abonnez-vous à notre newsletter et recevez les dernières mises à jour et offres.</p>
                 </div>
                 <div class="d-flex flex-column">
-                    <form action="">
+                    <form>
                         <input type="text" size="28" name="name" placeholder="Entrez votre nom" class="p-2 ps-4 mb-4"><br/>
                         <input type="email" size="28" name="mail" placeholder="Entrez votre email" class="p-2 ps-4 mb-4"><br/>
                         <button type="submit" name="sign" id="sign-footer" class="text-white">INSCRIVEZ-VOUS</button>
@@ -37,13 +37,13 @@
                     <p>Vous souhaitez nous contacter.<br>Plusieurs solutions s'offrent à vous.</p>
                 </div>
                 <div class="contact-us d-block d-lg-flex">
-                    <a href="tel:+33389878586" class="pb-5 pb-lg-0"><img src="img/call.svg" alt="Icône de téléphone" class="call"><a>
+                    <a href="tel:+33389878586" class="pb-5 pb-lg-0"><img src="img/call.svg" alt="Icône de téléphone" class="call"></a>
                     <p class="text-white pt-3 pt-lg-0">Par téléphone au :<br>
                         <span class="phone-number">03 89 87 85 86</span></p>
                     
                 </div>
                 <div class="contact-us d-block d-lg-flex">
-                    <a href="mailto: contact[@]musicband.com" class="pb-5 pb-lg-0"><img src="img/mail.svg" alt="Icône de téléphone" class="call"></a>
+                    <a href="#" class="pb-5 pb-lg-0"><img src="img/mail.svg" alt="Icône de téléphone" class="call"></a>
                     <p class="text-white pt-3 pt-lg-0">Par email au :<br>
                         <span class="phone-number">contact[@]musicband.com</span></p>
                 </div>
@@ -55,7 +55,7 @@
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
         <script>   
             if(window.innerWidth>1440) {
-                let swiper = new Swiper(".mySwiper", {slidesPerView: 5.25, spaceBetween: 47, freeMode: true,});
+                let swiper = new Swiper(".mySwiper", {slidesPerView: 5.25, spaceBetween: 30, freeMode: true,});
                 let swiperA = new Swiper(".mySwiperA", {slidesPerView: 6.75, spaceBetween: 30, freeMode: true,});
                 }else if(window.innerWidth>1200){
                     let swiper = new Swiper(".mySwiper", {slidesPerView: 4.50, spaceBetween: 30, freeMode: true,});
@@ -67,7 +67,7 @@
                     let swiperA = new Swiper(".mySwiperA", {slidesPerView: 4.75, spaceBetween : 30, freeMode:true,})
                 
                 }else if(window.innerWidth>630){
-                    let swiper = new Swiper(".mySwiper", {slidesPerView: 2.50, spaceBetween: 33, freeMode: true,});
+                    let swiper = new Swiper(".mySwiper", {slidesPerView: 2.50, spaceBetween: 30, freeMode: true,});
                     let swiperA = new Swiper(".mySwiperA", {slidesPerView: 3, spaceBetween: 30, freeMode: true,});
                 }else if(window.innerWidth>350){
                     let swiper = new Swiper(".mySwiper", {slidesPerView: 1.40, spaceBetween: 30, freeMode: true,});
