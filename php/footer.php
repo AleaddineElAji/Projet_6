@@ -51,6 +51,15 @@
             </div>
         
         </footer>
+        <div id="dz-root"></div>
+
+        <script src="https://e-cdns-files.dzcdn.net/js/min/dz.js"></script>
+        <script>
+	    DZ.init({
+		    appId  : '508702',
+		    channelUrl : 'dylanc903.promo-93.codeur.online/music-band/'
+	    });
+</script>
         <script src="js/script.js"></script>
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
         <script>   
@@ -58,7 +67,7 @@
                 let swiper = new Swiper(".mySwiper", {slidesPerView: 5.25, spaceBetween: 30, freeMode: true,});
                 let swiperA = new Swiper(".mySwiperA", {slidesPerView: 6.75, spaceBetween: 30, freeMode: true,});
                 }else if(window.innerWidth>1200){
-                    let swiper = new Swiper(".mySwiper", {slidesPerView: 4.50, spaceBetween: 30, freeMode: true,});
+                    let swiper = new Swiper(".mySwiper", {slidesPerView: 4.50, spaceBetween: 70, freeMode: true,});
                     let swiperA = new Swiper(".mySwiperA", {slidesPerView: 5.75, spaceBetween: 30, freeMode: true,});
                 }else if(window.innerWidth>1000){
                     let swiper = new Swiper(".mySwiper", {slidesPerView: 3.25, spaceBetween: 30, freeMode: true,});

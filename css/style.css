@@ -33,8 +33,12 @@ header {
     background-image: url(../img/bg-hero.png);
     background-repeat: no-repeat;
     height: 50rem;
+<<<<<<< HEAD
     /* border: red 1px solid; */
+=======
+>>>>>>> af200f2971798dbced911cb00e8dc549172cd4b7
     padding: 0;
+    margin-bottom : 3rem;
 }
 
 h1 {
@@ -106,6 +110,13 @@ footer {
 #catchphrase {
     height: calc(50rem - 120px);
     padding-left: 5rem;
+<<<<<<< HEAD
+=======
+}
+
+.swiper-slide {
+    width : fit-content!important;
+>>>>>>> af200f2971798dbced911cb00e8dc549172cd4b7
 }
 
 .swiper-slide {
