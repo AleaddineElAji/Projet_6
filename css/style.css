@@ -33,6 +33,7 @@ header {
     background-image: url(../img/bg-hero.png);
     background-repeat: no-repeat;
     height: 50rem;
+    /* border: red 1px solid; */
     padding: 0;
     margin-bottom : 3rem;
 }
@@ -108,9 +109,7 @@ footer {
     padding-left: 5rem;
 }
 
-.swiper-slide {
-    width : fit-content!important;
-}
+
 
 #searchfield {
     background-color: #f0f5f9;
@@ -349,7 +348,6 @@ h3 {
 
 #podcasts {
     margin-bottom: 5rem;
-
 }
 
 #genre div {
